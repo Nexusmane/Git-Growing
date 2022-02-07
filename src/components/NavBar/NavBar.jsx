@@ -9,15 +9,16 @@ function NavBar({ user , setUser}) {
   }
 
   return (
-    <nav>
-      <Link to="/orders">Order History</Link>
+    <aside>
+      <h2 className="site-title"> Git Growing </h2>
+      <Link to="/plants">Plant List</Link>
       &nbsp; | &nbsp;
-      <Link to="/orders/new">New Order</Link>
+      <Link to="/plants/new">New Plant</Link>
       &nbsp; | &nbsp;
-      <span>Welcome, {user.name}~</span>
+      <span> It's Plant Time ~ {user.name} </span>
       &nbsp; | &nbsp;
       <Link onClick={handleLogOut} to="">Log Out</Link>
-    </nav>
+    </aside>
   )
 }
 

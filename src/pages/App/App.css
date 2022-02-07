@@ -36,3 +36,14 @@
     transform: rotate(360deg);
   }
 }
+
+aside {
+  background-color: rgb(0, 70, 0);
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 3vmin 2vmin;
+}
+
+
