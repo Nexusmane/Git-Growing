@@ -12,7 +12,7 @@ export default function PlantListPage() {
     }, []);
 
     async function handleAddPlant(plantData) {
-        const plant = await postsAPI.add(postData);
+        const plant = await postsAPI.add(plantData);
         setPlantPosts([...plants, plant]);
     }
 

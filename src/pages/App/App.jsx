@@ -3,6 +3,7 @@ import { useState } from "react";
 import { getUser } from "../../utilities/users-service";
 import { Routes, Route } from "react-router-dom";
 import NewPlantPage from "../NewPlantPage/NewPlantPage";
+import PlantListPage from '../PlantListPage/PlantListPage';
 import AuthPage from "../AuthPage/AuthPage";
 import NavBar from "../../components/NavBar/NavBar";
 
@@ -17,6 +18,7 @@ function App() {
         <NavBar setUser={setUser} user={user}/>
           <Routes>
             <Route path="/plants/new" element={<NewPlantPage />} />
+            <Route path="/plants/list" element={<PlantListPage />} />
           </Routes>
         </>
         :

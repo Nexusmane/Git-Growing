@@ -11,7 +11,7 @@ function NavBar({ user , setUser}) {
   return (
     <aside>
       <h2 className="site-title"> Git Growing </h2>
-      <Link to="/plants">Plant List</Link>
+      <Link to="/plants/list">Plant List</Link>
       &nbsp; | &nbsp;
       <Link to="/plants/new">New Plant</Link>
       &nbsp; | &nbsp;

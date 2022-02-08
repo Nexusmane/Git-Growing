@@ -1,7 +1,6 @@
 import { useState } from "react";
-import handleAddPlant from '../../pages/PlantListPage/PlantListPage';
 
-export default function PlantPostForm({handleAddPost}) {
+export default function PlantPostForm({handleAddPlant}) {
     const [content, setContent] = useState('');
 
     function handleSubmit(e) {
