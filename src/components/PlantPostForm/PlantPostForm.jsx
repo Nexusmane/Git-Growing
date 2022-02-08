@@ -2,13 +2,12 @@ import { useState } from "react";
 import * as plantPostsAPI from "../../utilities/posts-api";
 
 export default function PlantPostForm() {
-    const [content, setContent] = useState('');
     const [plantPosts, setPlantPosts] = useState([]);
     const [formData, setFormData] = useState({name:'', watering:'', exposure:'', notes:''});
 
     function handleSubmit(e) {
         e.preventDefault();
-        handleAddPlant(content);
+        handleAddPlant();
     }
 
     function handleChange(e) {
@@ -26,20 +25,20 @@ export default function PlantPostForm() {
             <form onSubmit={handleSubmit}>
                 <label>
                     Plant Name:
-                    <input type='text' name='name' />
+                    <input type='text' name='name'/>
                 </label>
                 <label> Desired Sunlight Exposure
-                <select value='Sunlight Exposure' name='exposure'> 
-                    <option selected value='Direct'>Direct</option>
+                <select value={formData.name} name='exposure' onChange={handleChange}> 
+                    <option value='Direct'>Direct</option>
                     <option value='Indirect'>Indirect</option>
-                    <option value='Shade'>Shade</option>
+                    <option selected value='Shade'>Shade</option>
                     <option value='Growlight'>Growlight</option>
                 </select>
                 </label>
                 <label> Watering Frequency
-                <select value='Watering Freqeuncy' name='watering'>
+                <select value={formData.name} name='watering' onChange={handleChange}>
                     <option selected value='Daily'>Daily</option>
-                    <option selected value='Weekly'>Weekly</option>
+                    <option value='Weekly'>Weekly</option>
                     <option value='Bi-Weekly'>Bi-Weekly</option>
                     <option value='Monthly'>Monthly</option>
                     <option value='Cactus'>Cactus</option>
@@ -47,12 +46,12 @@ export default function PlantPostForm() {
                 </label> 
                 <label>Additional Notes, Plant Progress, etc. 
                 <textarea
-                    value={content}
-                    onChange={e => setContent(e.target.value)}
+                    value={formData.name}
                     name='notes'
+                    onChange={handleChange}
                 /> 
                 </label> 
-                <button type='submit'>Add Plant</button>
+                <button type='submit' value='Submit'>Add Plant</button>
             </form>
         </div>
     );

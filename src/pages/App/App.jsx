@@ -17,7 +17,7 @@ function App() {
         <>
         <NavBar setUser={setUser} user={user}/>
           <Routes>
-            <Route path="/plants/new" element={<NewPlantPage />} />
+            <Route path="/plants/new" element={<NewPlantPage  />} />
             <Route path="/plants/list" element={<PlantListPage />} />
           </Routes>
         </>
