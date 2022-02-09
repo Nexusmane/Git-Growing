@@ -11,11 +11,6 @@ export default function PlantListPage() {
         }
         getPlantPosts();
     }, []);
-
-    async function handleAddPlant(plantData) {
-        const plant = await plantPostsAPI.add(plantData);
-        setPlantPosts([...plantPosts, plant]);
-    }
     
 
     return (

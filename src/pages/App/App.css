@@ -44,6 +44,15 @@ aside {
   flex-direction: column;
   justify-content: space-between;
   margin: 3vmin 2vmin;
+  color: white;
+  margin: 0;
+}
+
+button {
+  max-width: 15vw;
+  max-height: 5vh;
+  align-items: center;
+  
 }
 
 

@@ -6,6 +6,6 @@ const plantsCtrl = require('../../controllers/api/plantPosts');
 router.get('/', plantsCtrl.getAll);
 
 // POST /api/items/:id
-router.post('/:id', plantsCtrl.create);
+router.post('/', plantsCtrl.create);
 
 module.exports = router;

@@ -13,6 +13,7 @@ async function getAll(req, res) {
 }
 
 async function create(req, res) {
+    console.log(req.body);
     req.body.user = req.user._id; 
     const plant = await Plant.create(req.body);
     res.json(plant);
