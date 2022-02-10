@@ -126,7 +126,6 @@ button, a.button {
   font-weight: bold;
   text-decoration: none;
   text-align: center;
-  border: .1vmin solid var(--tan-2);
   border-radius: .5vmin;
   outline: none;
   cursor: pointer;
@@ -149,5 +148,4 @@ button:disabled, form:invalid button[type="submit"] {
 
 button[type="submit"] {
   grid-column: span 2;
-  margin: 1vmin 0 0;
 }

@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useNavigate } from 'react-router-dom';
 import * as plantPostsAPI from "../../utilities/posts-api";
+import './PlantPostForm.css';
 
 export default function PlantPostForm() {
     const [formData, setFormData] = useState({name:'', watering:'', exposure:'', notes:''});
@@ -19,10 +20,10 @@ export default function PlantPostForm() {
     return (
         <div className='inputForm'>
             <form onSubmit={handleSubmit}>
-                <label> Plant Name:
+                <label className='input-label'> Plant Name:
                     <input type='text' name='name' onChange={handleChange}/>
                 </label>
-                <label> Desired Sunlight Exposure
+                <label className='input-label'> Desired Sunlight Exposure
                     <select value={formData.name} name='exposure' onChange={handleChange}> 
                         <option value='Direct'>Direct</option>
                         <option value='Indirect'>Indirect</option>
@@ -30,7 +31,7 @@ export default function PlantPostForm() {
                         <option value='Growlight'>Growlight</option>
                     </select>
                 </label>
-                <label> Watering Frequency
+                <label className='input-label'> Watering Frequency
                     <select value={formData.name} name='watering' onChange={handleChange}>
                         <option value='Daily'>Daily</option>
                         <option value='Weekly'>Weekly</option>
@@ -39,7 +40,7 @@ export default function PlantPostForm() {
                         <option value='Cactus'>Cactus</option>
                     </select>
                 </label> 
-                <label>Additional Notes, Plant Progress, etc. 
+                <label className='input-label'>Additional Notes, Plant Progress, etc. 
                     <textarea
                         // value={formData.name}
                         name='notes'

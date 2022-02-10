@@ -1,0 +1,25 @@
+.PlantListItem {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0.5rem;
+    padding: 0.2rem 0.6rem;
+    border-radius: 0.3rem;
+    list-style: none;
+    color: rgb(1, 89, 1);
+    font-size: 1rem;
+    font-weight: bold;
+  }
+
+.plant-container { 
+    border: 2px black solid;
+    border-radius: 8px;
+    min-width:30vw;
+    max-width: 40vmin;
+    margin: 8px auto;
+  }
+
+.plant-field {
+    text-decoration: underline;
+    margin: 0;
+}

@@ -1,6 +1,7 @@
 import PlantPostForm from "../../components/PlantPostForm/PlantPostForm";
 
 function NewPlantPage() {
+
   return (
     <>
     <h1>NewPlantPage</h1>
