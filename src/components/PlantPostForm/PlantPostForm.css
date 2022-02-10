@@ -3,7 +3,8 @@
     border: 2px black solid;
     border-radius: 8px;
     margin: 8px auto;
-    max-width: 65vw;;
+    max-width: 65vw;
+    box-shadow: 1px 10px 12px black;
   }
 
 .input-label {
@@ -16,3 +17,9 @@ button {
     align-items: center;
 }
 
+.new-plant-form {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 5vh 5vw;
+
+}

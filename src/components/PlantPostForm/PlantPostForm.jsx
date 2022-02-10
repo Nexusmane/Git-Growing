@@ -6,11 +6,16 @@ import './PlantPostForm.css';
 export default function PlantPostForm() {
     const [formData, setFormData] = useState({name:'', watering:'', exposure:'', notes:''});
     const navigate = useNavigate();
+    const [error, setError] = useState('');
 
     async function handleSubmit(e) {
         e.preventDefault();
+    try {
         const plant = await plantPostsAPI.add(formData);
         navigate('/plants/list');
+    } catch {
+        setError('All fields are required for plant creation.');
+      }
     }
 
     function handleChange(e) {
@@ -18,13 +23,15 @@ export default function PlantPostForm() {
     }
 
     return (
+        <>
         <div className='inputForm'>
-            <form onSubmit={handleSubmit}>
+            <form className='new-plant-form' onSubmit={handleSubmit}>
                 <label className='input-label'> Plant Name:
                     <input type='text' name='name' onChange={handleChange}/>
                 </label>
                 <label className='input-label'> Desired Sunlight Exposure
-                    <select value={formData.name} name='exposure' onChange={handleChange}> 
+                    <select name='exposure' onChange={handleChange}> 
+                        <option value=''></option>
                         <option value='Direct'>Direct</option>
                         <option value='Indirect'>Indirect</option>
                         <option value='Shade'>Shade</option>
@@ -32,7 +39,7 @@ export default function PlantPostForm() {
                     </select>
                 </label>
                 <label className='input-label'> Watering Frequency
-                    <select value={formData.name} name='watering' onChange={handleChange}>
+                    <select name='watering' onChange={handleChange}>
                         <option value='Daily'>Daily</option>
                         <option value='Weekly'>Weekly</option>
                         <option value='Bi-Weekly'>Bi-Weekly</option>
@@ -42,7 +49,6 @@ export default function PlantPostForm() {
                 </label> 
                 <label className='input-label'>Additional Notes, Plant Progress, etc. 
                     <textarea
-                        // value={formData.name}
                         name='notes'
                         onChange={handleChange}
                     /> 
@@ -50,5 +56,7 @@ export default function PlantPostForm() {
                 <button type='submit' value='Submit'>Add Plant</button>
             </form>
         </div>
+        <p className="error-message">&nbsp;{error}</p>
+        </>
     );
 }
