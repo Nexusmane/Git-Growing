@@ -24,8 +24,8 @@ export default function PlantListPage({ plant }) {
         <>
         <h1> User's Plant List Page </h1>
         <ul> 
-            {plantPosts.map((p) => (
-                <PlantListItem plant={p}  />
+            {plantPosts.map((p, idx) => (
+                <PlantListItem plant={p} key={idx} />
             ))}
         </ul>
         </>

@@ -9,3 +9,7 @@ export function getAll() {
 export function add(plantData) {
     return sendRequest(BASE_URL, 'POST', plantData);
 }
+
+export function removePlant(plantData) {
+    return sendRequest(BASE_URL, 'DELETE', plantData);
+}

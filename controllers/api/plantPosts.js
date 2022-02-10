@@ -21,5 +21,7 @@ async function create(req, res) {
 
 
 async function removePlant(req, res) {
-    console.log(req);
+    const plant = await Plant.findById(req.params.id);
+    removePlant.remove();
+    res.json(removePlant);
 }
