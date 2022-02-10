@@ -3,6 +3,7 @@ const Plant = require('../../models/plant');
 module.exports = {
     getAll,
     create,
+    removePlant,
 };
 
 async function getAll(req, res) {
@@ -13,8 +14,12 @@ async function getAll(req, res) {
 }
 
 async function create(req, res) {
-    console.log(req.body);
     req.body.user = req.user._id; 
     const plant = await Plant.create(req.body);
     res.json(plant);
+}
+
+
+async function removePlant(req, res) {
+    console.log(req);
 }
