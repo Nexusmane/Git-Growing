@@ -2,14 +2,8 @@ import { useState, useEffect } from 'react';
 import * as plantPostsAPI from '../../utilities/posts-api';
 import PlantListItem from '../../components/PlantListItem/PlantListItem';
 
-export default function PlantListPage({ plant }) {
+export default function PlantListPage() {
     const [plantPosts, setPlantPosts] = useState([]);
-
-
-    // function handleDelete(e) {
-    //     e.preventDefault();
-    //     const removePlant = plantPostsAPI.removePlant(plant._id);
-    // }
 
     useEffect(function() {
         async function getPlantPosts() {
@@ -25,7 +19,7 @@ export default function PlantListPage({ plant }) {
         <h1> User's Plant List Page </h1>
         <ul> 
             {plantPosts.map((p, idx) => (
-                <PlantListItem plant={p} key={idx} />
+                <PlantListItem plant={p} key={idx} plantPosts={plantPosts} setPlantPosts={setPlantPosts} />
             ))}
         </ul>
         </>

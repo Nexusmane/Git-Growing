@@ -1,13 +1,21 @@
 import "./PlantListItem.css";
+import * as plantPostsAPI from '../../utilities/posts-api';
 
-export default function PlantListItem({ plant }) {
+export default function PlantListItem({ plant, plantPosts, setPlantPosts }) {
 
     function handleEdit() {
         console.log('Update Clicked')
     }
 
-    function handleDelete() {
-        console.log('Delete Clicked')
+    async function handleDelete() {
+        let plantPostCopy = [...plantPosts];
+        const removePlant = await plantPostsAPI.removePlant(plant);
+        let mutatedPlantPost = [];
+        plantPostCopy.forEach(function(p) {
+            if (p._id !== removePlant._id)
+            {mutatedPlantPost.push(p)};
+        });
+        setPlantPosts(mutatedPlantPost);
     }
 
     return (
@@ -31,13 +39,13 @@ export default function PlantListItem({ plant }) {
             <button 
                 type='submit'
                 value='submit'
-                onSubmit={handleEdit}
+                onClick={handleEdit}
                 className="list-button"> Update Plant 
             </button>
             <button 
                 type='submit' 
                 value='submit' 
-                onSubmit={handleDelete}
+                onClick={handleDelete}
                 className="list-button"> Remove Plant 
             </button>
         </div>

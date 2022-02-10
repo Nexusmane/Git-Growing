@@ -40,6 +40,7 @@ export default function PlantPostForm() {
                 </label>
                 <label className='input-label'> Watering Frequency
                     <select name='watering' onChange={handleChange}>
+                        <option value=''></option>
                         <option value='Daily'>Daily</option>
                         <option value='Weekly'>Weekly</option>
                         <option value='Bi-Weekly'>Bi-Weekly</option>
