@@ -14,9 +14,13 @@ async function getAll(req, res) {
 }
 
 async function create(req, res) {
-    req.body.user = req.user._id; 
-    const plant = await Plant.create(req.body);
-    res.json(plant);
+    try {
+        req.body.user = req.user._id; 
+        const plant = await Plant.create(req.body) 
+        res.json(plant);
+    } catch {
+        res.status(400).json('No Plant Created');
+    }
 }
 
 
