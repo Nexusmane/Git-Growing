@@ -1,11 +1,10 @@
 import "./PlantListItem.css";
 import * as plantPostsAPI from '../../utilities/posts-api';
+import Switch from '../Switch/Switch';
+import { useState } from 'react';
 
 export default function PlantListItem({ plant, plantPosts, setPlantPosts }) {
-
-    function handleEdit() {
-        console.log('Update Clicked')
-    }
+    const [value, setValue] = useState(false);
 
     async function handleDelete() {
         let plantPostCopy = [...plantPosts];
@@ -36,12 +35,9 @@ export default function PlantListItem({ plant, plantPosts, setPlantPosts }) {
                 <span className="plant-field"> Plant Notes: </span>
                 {plant.notes} 
             </li>
-            <button 
-                type='submit'
-                value='submit'
-                onClick={handleEdit}
-                className="list-button"> Update Plant 
-            </button>
+            <Switch 
+                isOn={value}
+                handleToggle={() => setValue(!value)}/>
             <button 
                 type='submit' 
                 value='submit' 

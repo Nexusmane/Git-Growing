@@ -6,6 +6,7 @@ const plantSchema = new Schema ({
     watering: {type: String, required: true},
     exposure: {type: String, required: true},
     notes: {type: String, required: true},
+    watered: {type: Boolean, required: false},
     user: {type: Schema.Types.ObjectId, ref:'User'},
 }, {
     timestamps: true, 
