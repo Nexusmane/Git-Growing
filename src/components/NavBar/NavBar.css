@@ -1,20 +1,32 @@
+aside {
+    background-color: rgb(0, 70, 0);
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    padding: 6vmin;
+    box-shadow: 0px 5px 5px black;
+    text-decoration: none;
+    text-shadow: 5px 2px 5px black;
+    font-size: large;
+}
+
 .site-title { 
     font-weight: bold;
     color: white;
+    font-family: 'Fredoka One';
+    font-size: 4vmin;
 }
 
 .nav-link {
     color:white;
 }
 
-aside {
-    background-color: rgb(0, 70, 0);
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    margin: 3vmin 2vmin;
-    color: white;
-    margin: 0;
-  }
+.nav-link:hover {
+    color:darkgoldenrod;
+    border-radius: 5px;
+}
   
+.site-title:hover {
+    color:darkgoldenrod;
+}

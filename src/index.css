@@ -19,11 +19,17 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
   'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
   sans-serif;
+  font-family: 'Balsamiq Sans';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: var(--tan-4);
   padding: 0 0 2vmin 0;
   height: 100vh;
+  display: grid;
+  /* grid-template-columns: 1fr 2.5fr;
+  grid-template-rows: 1fr; */
+  border-radius: 1vmin;
+  background-color: rgb(99, 58, 29);
 }
 
 code {
