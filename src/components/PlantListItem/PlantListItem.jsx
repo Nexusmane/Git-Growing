@@ -35,9 +35,12 @@ export default function PlantListItem({ plant, plantPosts, setPlantPosts }) {
                 <span className="plant-field"> Plant Notes: </span>
                 {plant.notes} 
             </li>
-            <Switch 
-                isOn={value}
-                handleToggle={() => setValue(!value)}/>
+            <li className="PlantListItem">
+                <span className="plant-field">Has this plant been watered recently? </span>
+                <Switch 
+                    isOn={value}
+                    handleToggle={() => setValue(!value)}/>
+            </li>
             <button 
                 type='submit' 
                 value='submit' 

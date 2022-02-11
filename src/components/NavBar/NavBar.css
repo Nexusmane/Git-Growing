@@ -9,6 +9,7 @@ aside {
     text-decoration: none;
     text-shadow: 5px 2px 5px black;
     font-size: large;
+    border-radius: 50px;
 }
 
 .site-title { 
