@@ -47,7 +47,7 @@ export default function PlantListItem({ plant, plantPosts, setPlantPosts, toggle
             <li className="PlantListItem">
                 <span className="plant-field">Has this plant been watered recently? </span>
                 <Switch 
-                    isOn={value}
+                    isOn={plant.watered}
                     handleCheckbox={handleCheckbox}
                     handleToggle={() => setValue(!value)}
                     />
