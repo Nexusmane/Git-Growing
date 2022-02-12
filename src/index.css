@@ -26,8 +26,6 @@ body {
   padding: 0 0 2vmin 0;
   height: 100vh;
   display: grid;
-  /* grid-template-columns: 1fr 2.5fr;
-  grid-template-rows: 1fr; */
   border-radius: 1vmin;
   background-color: rgb(99, 58, 29);
 }

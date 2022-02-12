@@ -1,10 +1,10 @@
-.react-switch-checkbox {
+/* .react-switch-checkbox {
     height: 0;
     width: 0;
     visibility: hidden;
-  }
+  } */
   
-  .react-switch-label {
+  /* .react-switch-label {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -37,4 +37,4 @@
   
   .react-switch-label:active .react-switch-button {
     width: 22.5px;
-  }
+  } */

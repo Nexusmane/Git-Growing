@@ -11,4 +11,7 @@ router.post('/', plantsCtrl.create);
 // DELETE /api//plantPost/list/delete
 router.delete('/', plantsCtrl.removePlant);
 
+// UPDATE /api//plantPost/list/delete
+router.put('/', plantsCtrl.isWatered);
+
 module.exports = router;

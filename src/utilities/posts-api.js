@@ -13,3 +13,7 @@ export function add(plantData) {
 export function removePlant(plantData) {
     return sendRequest(BASE_URL, 'DELETE', plantData);
 }
+
+export function isWatered(plantData) {
+    return sendRequest(BASE_URL, 'PUT', plantData);
+}

@@ -1,12 +1,12 @@
 import React from 'react';
 import './Switch.css';
 
-const Switch = ({ isOn, handleToggle }) => {
+const Switch = ({ isOn, handleToggle, handleCheckbox }) => {
   return (
     <>
       <input
         checked={isOn}
-        onChange={handleToggle}
+        onChange={handleToggle, handleCheckbox}
         className="react-switch-checkbox"
         id={`react-switch-new`}
         type="checkbox"

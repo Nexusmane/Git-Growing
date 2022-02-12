@@ -3,8 +3,10 @@ import * as plantPostsAPI from '../../utilities/posts-api';
 import Switch from '../Switch/Switch';
 import { useState } from 'react';
 
-export default function PlantListItem({ plant, plantPosts, setPlantPosts }) {
+export default function PlantListItem({ plant, plantPosts, setPlantPosts, toggleRotten }) {
     const [value, setValue] = useState(false);
+
+
 
     async function handleDelete() {
         let plantPostCopy = [...plantPosts];
@@ -16,6 +18,13 @@ export default function PlantListItem({ plant, plantPosts, setPlantPosts }) {
         });
         setPlantPosts(mutatedPlantPost);
     }
+
+        async function handleCheckbox(e) {
+            e.preventDefault();
+            const waterPlant = await plantPostsAPI.isWatered(plant);
+            toggleRotten();
+        }
+
 
     return (
         <div className='plant-container'> 
@@ -39,7 +48,9 @@ export default function PlantListItem({ plant, plantPosts, setPlantPosts }) {
                 <span className="plant-field">Has this plant been watered recently? </span>
                 <Switch 
                     isOn={value}
-                    handleToggle={() => setValue(!value)}/>
+                    handleCheckbox={handleCheckbox}
+                    handleToggle={() => setValue(!value)}
+                    />
             </li>
             <button 
                 type='submit' 

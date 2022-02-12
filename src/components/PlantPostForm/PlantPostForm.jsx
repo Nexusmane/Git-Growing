@@ -4,7 +4,7 @@ import * as plantPostsAPI from "../../utilities/posts-api";
 import './PlantPostForm.css';
 
 export default function PlantPostForm() {
-    const [formData, setFormData] = useState({name:'', watering:'', exposure:'', notes:''});
+    const [formData, setFormData] = useState({name:'', watering:'', exposure:'', notes:'',watered:'false' });
     const navigate = useNavigate();
     const [error, setError] = useState('');
 

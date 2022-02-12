@@ -4,6 +4,7 @@ module.exports = {
     getAll,
     create,
     removePlant,
+    isWatered,
 };
 
 async function getAll(req, res) {
@@ -27,5 +28,15 @@ async function create(req, res) {
 async function removePlant(req, res) {
     const plant = await Plant.findById(req.body._id);
     plant.remove();
+    res.json(plant);
+}
+
+async function isWatered(req, res) {
+    let plant = await Plant.findById(req.body._id);
+    console.log(req.body);
+    console.log(plant);
+    console.log(plant.watered);
+    plant.watered = !plant.watered;
+    plant.save();
     res.json(plant);
 }
