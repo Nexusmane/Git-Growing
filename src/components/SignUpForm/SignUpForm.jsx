@@ -1,6 +1,7 @@
 import { Component } from "react";
 import { signUp } from "../../utilities/users-service";
 import { useNavigate } from 'react-router-dom';
+import background from '../Assets/background.jpg';
 
 // const navigate = useNavigate();
 class SignUpForm extends Component {
@@ -30,9 +31,7 @@ class SignUpForm extends Component {
 
       const user = await signUp(formData);
       this.props.setUser(user);
-      console.log("before navigate");
       navigate('/plants/home');
-      console.log('after navigate');
     } catch {
       // An error occurred...
       this.setState({error: 'Sign Up Failed - Try Again'});
@@ -43,7 +42,7 @@ class SignUpForm extends Component {
     const disable = this.state.password !== this.state.confirm;
     return (
       <div>
-        <div className="form-container">
+        <div className="form-container" style={{ backgroundImage: `url(${background})`}}>
           <form autoComplete="off" onSubmit={this.handleSubmit}>
             <label>Name</label>
             <input type="text" name="name" value={this.state.name} onChange={this.handleChange} required />

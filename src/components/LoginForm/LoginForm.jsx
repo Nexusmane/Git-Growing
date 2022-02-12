@@ -1,6 +1,8 @@
 import { useState } from 'react';
 import * as usersService from '../../utilities/users-service';
 import { useNavigate } from 'react-router-dom';
+import background from '../../components/Assets/background.jpg';
+import './LoginForm.css';
 
 export default function LoginForm({ setUser }) {
   const [credentials, setCredentials] = useState({
@@ -32,7 +34,7 @@ export default function LoginForm({ setUser }) {
 
   return (
     <div>
-      <div className="form-container" onSubmit={handleSubmit}>
+      <div className="form-container" onSubmit={handleSubmit} style={{ backgroundImage: `url(${background})` }}>
         <form autoComplete="off" >
           <label>Email</label>
           <input type="text" name="email" value={credentials.email} onChange={handleChange} required />

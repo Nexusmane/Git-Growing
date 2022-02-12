@@ -1,0 +1,10 @@
+.home-page {
+    font-weight: bold;
+    color: white;
+    font-family: 'Fredoka One';
+    font-size: 4vmin;
+    text-decoration: none;
+    text-shadow: 5px 2px 5px black;
+    margin: 4vmin 0 0 1vmin;
+    font-size: 5vmin;
+}

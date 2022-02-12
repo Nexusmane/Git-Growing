@@ -2,6 +2,7 @@ import SignUpForm from "../../components/SignUpForm/SignUpForm";
 import { useState } from 'react';
 import LoginForm from '../../components/LoginForm/LoginForm';
 import React from 'react';
+import './AuthPage.css';
 
 function AuthPage({ setUser }) {
   const [display, setDisplay] = useState('login');
