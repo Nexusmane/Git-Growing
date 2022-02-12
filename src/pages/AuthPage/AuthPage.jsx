@@ -8,7 +8,7 @@ function AuthPage({ setUser }) {
   const [display, setDisplay] = useState('login');
   return (
     <main>
-      <h1>Get Started</h1>
+      <h1 className="get-started">Get Started</h1>
       <div>
         <button onClick={() => setDisplay('login')}>Log In</button>
         <button onClick={() => setDisplay('signup')}>Sign Up</button>

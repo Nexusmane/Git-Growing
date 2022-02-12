@@ -33,10 +33,10 @@ async function removePlant(req, res) {
 
 async function isWatered(req, res) {
     let plant = await Plant.findById(req.body._id);
-    console.log(req.body);
-    console.log(plant);
-    console.log(plant.watered);
     plant.watered = !plant.watered;
     plant.save();
-    res.json(plant);
+    let plants = await Plant.find({
+        user: req.user._id
+    });
+    res.json(plants);
 }

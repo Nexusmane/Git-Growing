@@ -8,3 +8,38 @@
     margin: 4vmin 0 0 1vmin;
     font-size: 5vmin;
 }
+
+hr {
+    background-color: goldenrod;
+    max-width: 90vw;
+    height: .5px;
+    border: .5vmin solid goldenrod;
+    border-radius: 100px;
+    margin-bottom: 7vmin;
+}
+
+.headliner { 
+    display: flex;
+    align-items: flex-start;
+    margin: 6vmin 0 1vmin 4vmin;
+    color: white;
+}
+
+p {
+    color: goldenrod;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.desc-container {
+    background-color: rgb(60, 33, 14);
+    border: 3px solid rgb(0, 70, 0);;
+    border-radius: 50px;
+    margin: 0 4vw 1vh 4vw;
+    padding: 2vmin 1vmin 2vmin 1vmin;
+    box-shadow: 5px 5px 5px black;
+    text-decoration: none;
+    text-shadow: 5px 2px 5px black;
+    font-size: 2vmin;
+}

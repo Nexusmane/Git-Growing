@@ -10,13 +10,14 @@ aside {
     text-shadow: 5px 2px 5px black;
     font-size: large;
     border-radius: 50px;
+    font-size: 2vmin;
 }
 
 .site-title { 
     font-weight: bold;
     color: white;
     font-family: 'Fredoka One';
-    font-size: 4vmin;
+    font-size: 3.5vmin;
 }
 
 .nav-link {
