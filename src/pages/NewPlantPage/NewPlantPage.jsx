@@ -1,11 +1,11 @@
 import PlantPostForm from "../../components/PlantPostForm/PlantPostForm";
 import './NewPlantPage.css';
 
-function NewPlantPage() {
+function NewPlantPage({ user }) {
 
   return (
     <>
-    <h1>NewPlantPage</h1>
+    <h1>Ready to add a new plant {user.name}?</h1>
     <hr></hr>
     <PlantPostForm />
     </>

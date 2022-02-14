@@ -1,8 +1,9 @@
 import { useState, useEffect } from 'react';
 import * as plantPostsAPI from '../../utilities/posts-api';
 import PlantListItem from '../../components/PlantListItem/PlantListItem';
+import './PlantListPage'
 
-export default function PlantListPage() {
+export default function PlantListPage({ user }) {
     const [plantPosts, setPlantPosts] = useState([]);
     const [rotten, setRotten] = useState(false);
 
@@ -20,12 +21,12 @@ export default function PlantListPage() {
 
     return (
         <>
-        <h1> User's Plant List Page </h1>
-        <ul> 
-            {plantPosts.map((p, idx) => (
-                <PlantListItem plant={p} key={idx} plantPosts={plantPosts} setPlantPosts={setPlantPosts} toggleRotten={toggleRotten}/>
-            ))}
-        </ul>
+        <h1> {user.name}'s Plant List </h1>
+            <ul> 
+                {plantPosts.map((p, idx) => (
+                    <PlantListItem plant={p} key={idx} plantPosts={plantPosts} setPlantPosts={setPlantPosts} toggleRotten={toggleRotten}/>
+                ))}
+            </ul>
         </>
     );
 }

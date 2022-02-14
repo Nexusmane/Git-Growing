@@ -20,11 +20,11 @@ function App() {
         <NavBar setUser={setUser} user={user}/>
           <Routes>
             <Route path="/plants/home" element={<PlantHomePage />} />
-            <Route path="/plants/new" element={<NewPlantPage  />} />
-            <Route path="/plants/list" element={<PlantListPage />} />
+            <Route path="/plants/new" element={<NewPlantPage  user={user}/>} />
+            <Route path="/plants/list" element={<PlantListPage user={user}/>} />
           </Routes>
         <img className='gif' src={bonsly} alt='bonsly' />
-        <h5> "Are you lost little green thumb? Click on a link in the options aboove to Git Growing!"</h5>
+        <h5> "Hey {user.name}, are you lost? Click on a link in the options above to Git Growing!"</h5>
         </>
         :
         <AuthPage setUser={setUser}/>
