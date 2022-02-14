@@ -1,11 +1,12 @@
 import PlantPostForm from "../../components/PlantPostForm/PlantPostForm";
+import './NewPlantPage.css';
 
 function NewPlantPage() {
 
   return (
     <>
     <h1>NewPlantPage</h1>
-    <h2> New Plants will be created here </h2>
+    <hr></hr>
     <PlantPostForm />
     </>
   )

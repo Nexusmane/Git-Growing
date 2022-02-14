@@ -18,6 +18,7 @@ aside {
     color: white;
     font-family: 'Fredoka One';
     font-size: 3.5vmin;
+    align-items: center;
 }
 
 .nav-link {

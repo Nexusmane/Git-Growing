@@ -23,6 +23,8 @@ hr {
     align-items: flex-start;
     margin: 6vmin 0 1vmin 4vmin;
     color: white;
+    text-decoration: none;
+    text-shadow: 5px 2px 5px black;
 }
 
 p {

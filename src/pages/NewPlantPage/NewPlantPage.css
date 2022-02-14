@@ -1,0 +1,16 @@
+h1 { 
+    margin: 6vmin 0 2vmin 0;
+    color: white;
+    text-decoration: none;
+    text-shadow: 5px 2px 5px black;
+    font-size: 3.5vmin;
+}
+
+hr {
+    background-color: goldenrod;
+    max-width: 90vw;
+    height: .5px;
+    border: .5vmin solid goldenrod;
+    border-radius: 100px;
+    margin-bottom: 7vmin;
+}
