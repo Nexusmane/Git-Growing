@@ -1,9 +1,4 @@
-.form-container {
-    border: 1px solid black;
-    box-shadow: 3px 5px 8px black;
-}
-
-.login {
+.sign-up {
     display: flex;
     align-items: center;
     justify-content: space-evenly;

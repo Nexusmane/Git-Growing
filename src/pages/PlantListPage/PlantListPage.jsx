@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import * as plantPostsAPI from '../../utilities/posts-api';
 import PlantListItem from '../../components/PlantListItem/PlantListItem';
-import './PlantListPage'
+import './PlantListPage.css';
 
 export default function PlantListPage({ user }) {
     const [plantPosts, setPlantPosts] = useState([]);

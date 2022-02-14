@@ -1,7 +1,7 @@
 import { Component } from "react";
 import { signUp } from "../../utilities/users-service";
-import { useNavigate } from 'react-router-dom';
 import background from '../Assets/background.jpg';
+import './SignUpForm.css'
 
 // const navigate = useNavigate();
 class SignUpForm extends Component {
@@ -22,7 +22,6 @@ class SignUpForm extends Component {
   }
   
   handleSubmit = async (evt) => {
-    const navigate = useNavigate();
     evt.preventDefault();
     try {
       const formData = {...this.state};
@@ -31,7 +30,6 @@ class SignUpForm extends Component {
 
       const user = await signUp(formData);
       this.props.setUser(user);
-      navigate('/plants/home');
     } catch {
       // An error occurred...
       this.setState({error: 'Sign Up Failed - Try Again'});
@@ -52,7 +50,7 @@ class SignUpForm extends Component {
             <input type="password" name="password" value={this.state.password} onChange={this.handleChange} required />
             <label>Confirm</label>
             <input type="password" name="confirm" value={this.state.confirm} onChange={this.handleChange} required />
-            <button type="submit" disabled={disable}>SIGN UP</button>
+            <button className='sign-up' type="submit" disabled={disable}>SIGN UP</button>
           </form>
         </div>
         <p className="error-message">&nbsp;{this.state.error}</p>
