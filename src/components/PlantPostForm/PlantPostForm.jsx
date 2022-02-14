@@ -27,7 +27,7 @@ export default function PlantPostForm() {
         <div className='inputForm'>
             <form className='new-plant-form' onSubmit={handleSubmit}>
                 <label className='input-label'> Plant Name:
-                    <input type='text' name='name' onChange={handleChange}/>
+                    <input type='text' name='name' placeholder='Ex. Monstera' onChange={handleChange}/>
                 </label>
                 <label className='input-label'> Desired Sunlight Exposure
                     <select name='exposure' onChange={handleChange}> 
@@ -51,6 +51,7 @@ export default function PlantPostForm() {
                 <label className='input-label'>Additional Notes, Plant Progress, etc. 
                     <textarea
                         name='notes'
+                        placeholder="Ex. Bought the plant with spidermites, will need to clean ASAP"
                         onChange={handleChange}
                     /> 
                 </label> 

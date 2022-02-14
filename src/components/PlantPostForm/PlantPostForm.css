@@ -5,6 +5,9 @@
     margin: 8px auto;
     max-width: 65vw;
     box-shadow: 1px 10px 12px black;
+    font-size: 2vmin;
+    text-shadow: 5px 2px 5px black;
+    background-color: rgb(72, 40, 40);
   }
 
 .input-label {
@@ -12,14 +15,34 @@
 }
 
 button {
-    max-width: 15vw;
+    max-width: 55vw;
     max-height: 5vh;
-    align-items: center;
+    background-color: rgb(60, 33, 14);
 }
 
 .new-plant-form {
     display: flex;
     flex-wrap: wrap;
     margin: 5vh 5vw;
+    justify-content: space-between;
+}
 
+input { 
+    margin-left: 2vmin;
+    margin-bottom: 1vmin;
+    align-items: right;
+}
+
+select { 
+    margin-left: 1.5vmin;
+}
+
+textarea{
+    margin-left: 1.5vmin;
+}
+
+input, select, textarea { 
+    box-shadow: 5px 5px 5px black;
+    border: 1px solid black;
+    border-radius: 5px;
 }
